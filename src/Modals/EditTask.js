@@ -25,7 +25,7 @@ const EditTask = ({modal, toggle, updateTask, taskObj}) => {
     useEffect(() => {
         setTaskName(taskObj.Name);
         setDescription(taskObj.Description);
-    }, [])
+    }, [taskObj.Name, taskObj.Description])
     return (
         <>
             <Modal isOpen={modal} toggle={toggle}>
