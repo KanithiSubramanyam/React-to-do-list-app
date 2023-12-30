@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+
+.header {
+    height: 170px;
+    width: 100%;
+    background-color: #7873c1;
+    padding-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.taskcard {
+    margin: 20px;
+    padding: 20px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    width: 25%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.taskcard:hover {
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.6); 
+    transition: box-shadow 0.3s ease-in-out;
+
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+    color: rgb(31, 37, 206);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-button {
+    display: flex;
+    padding: auto;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.card-button i {
+    cursor: pointer;
+    margin: 5px;
+    width: 20px;
+    height: auto;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    .taskcard {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .card-button {
+        justify-content: flex-start; 
+        margin-right: 0px;
+        margin-top: 10px; 
+    }
 }
